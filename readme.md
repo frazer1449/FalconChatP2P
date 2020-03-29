@@ -1,4 +1,5 @@
 # FalconChatP2P
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/02295cfb529045b4997c24a467b2708a)](https://app.codacy.com/manual/justiceserv/FalconChatP2P?utm_source=github.com&utm_medium=referral&utm_content=justiceserv/FalconChatP2P&utm_campaign=Badge_Grade_Dashboard)
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/user?u=32640416)
 
 Developed by *FalconChat Developer Team*
