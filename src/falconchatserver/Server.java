@@ -113,10 +113,10 @@ public class Server extends javax.swing.JFrame {
             Message = textarea.getText(); 
             try
             {
-                Message = textarea.getText();
-                String path = "C:\\Users\\strea\\Documents\\NetbeansProjects\\FalconChatClient\\messageclient1.txt";
-                Path File_Path = Paths.get(path);
-                Files.writeString(File_Path, Message);
+//                Message = textarea.getText();
+//                String path = "C:\\Users\\strea\\Documents\\NetbeansProjects\\FalconChatClient\\messageclient1.txt";
+//                Path File_Path = Paths.get(path);
+//                Files.writeString(File_Path, Message);
             }
             catch(Exception e)
             {

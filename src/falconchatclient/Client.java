@@ -115,10 +115,10 @@ public class Client extends javax.swing.JFrame {
             dout.writeUTF(msgout);
             try 
            {
-                Message = textarea.getText();
-                String path = "C:\\Users\\strea\\Documents\\NetbeansProjects\\FalconChatClient\\messageclient2.txt";
-                Path File_Path = Paths.get(path);
-                Files.writeString(File_Path, Message);
+//                Message = textarea.getText();
+//                String path = "C:\\Users\\strea\\Documents\\NetbeansProjects\\FalconChatClient\\messageclient2.txt";
+//                Path File_Path = Paths.get(path);
+//                Files.writeString(File_Path, Message);
             } 
            catch(Exception e) 
            {
