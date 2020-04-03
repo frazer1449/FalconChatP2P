@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package falconchatclient;
+package falconchatclient2;
 
 /**
  *
@@ -11,7 +11,7 @@ package falconchatclient;
  */
 public class fcc {
     public static String ip = "127.0.0.1"; 
-    public static int port = 1201;
+    public static int port = 1202;
     public static Client c; 
     public static ClientLogin cl; 
     public static void main(String[] args) {

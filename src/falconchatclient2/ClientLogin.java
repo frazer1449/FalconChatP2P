@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package falconchatserver;
+package falconchatclient2;
 
 import javax.swing.JOptionPane;
 
@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author strea
  */
-public class ServerLogin extends javax.swing.JFrame {
+public class ClientLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form ClientLogin
      */
-    public ServerLogin() {
+    public ClientLogin() {
         initComponents();
         loginbtn.setOpaque(false);
         loginbtn.setContentAreaFilled(false);
@@ -32,8 +32,9 @@ public class ServerLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tfPort = new javax.swing.JTextField();
         tfUsername = new javax.swing.JTextField();
-        tfPassword = new javax.swing.JTextField();
+        tfIP = new javax.swing.JTextField();
         loginbtn = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
@@ -41,17 +42,18 @@ public class ServerLogin extends javax.swing.JFrame {
         setTitle("Client Login");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(tfUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 153, 263, 26));
-        getContentPane().add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 244, 263, 26));
+        getContentPane().add(tfPort, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 207, 263, 26));
+        getContentPane().add(tfUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 264, 263, 26));
+        getContentPane().add(tfIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 154, 263, 26));
 
         loginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginbtnActionPerformed(evt);
             }
         });
-        getContentPane().add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, 40));
+        getContentPane().add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 120, 40));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ServerLogin.png"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ClientLogin.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -61,10 +63,15 @@ public class ServerLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try
         {
+            fcc.ip = tfIP.getText(); 
+            fcc.port = Integer.parseInt(tfPort.getText());
+            fcc.username1 = tfUsername.getText(); 
+            fcc.c.setVisible(false);
+            fcc.cl.setVisible(true);
         }
-        catch(Exception e1)
+        catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null, e1, "InfoBox: ERROR", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, e, "InfoBox: ERROR", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_loginbtnActionPerformed
 
@@ -99,7 +106,7 @@ public class ServerLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ServerLogin().setVisible(true);
+                new ClientLogin().setVisible(true);
             }
         });
     }
@@ -107,7 +114,8 @@ public class ServerLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton loginbtn;
-    private javax.swing.JTextField tfPassword;
+    private javax.swing.JTextField tfIP;
+    private javax.swing.JTextField tfPort;
     private javax.swing.JTextField tfUsername;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package falconchatclient;
+package falconchatclient2;
 
 /**
  *
  * @author strea
  */
-public class fcc {
-    public static String ip = "127.0.0.1"; 
-    public static int port = 1201;
-    public static Client c; 
+public class FalconChatClient {
     public static ClientLogin cl; 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         // TODO code application logic here
-        c = new Client();
         cl = new ClientLogin(); 
+        cl.setVisible(true);
     }
+    
 }
